@@ -24,9 +24,13 @@ z = [2, 5, 8, 12]
 
 print(sum(z[-2:]))  # sum last 2 items
 
-### Lets say we want to sort by the second letter in each word
+### Lets say we want to sort by the second letter in each word using a lambda function
 
 words = ['Kevin', 'Kalvin', 'Korty', 'Kupton']
 
-new_list = sorted(words, key=lambda k: k[1])
+new_list = sorted(words, key=lambda k: k[2])
+
 print(new_list)
+
+
+
