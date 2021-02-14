@@ -6,7 +6,7 @@ Dequeue when removing an item from the front of the line
 '''
 
 
-class Queue():
+class Queue:
     def __init__(self):
         self.Queue = list()
 
@@ -35,4 +35,3 @@ my_queue.dequeue()
 print(my_queue)
 my_queue.dequeue()
 print(my_queue)
-
