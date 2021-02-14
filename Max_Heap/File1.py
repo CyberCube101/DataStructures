@@ -40,7 +40,7 @@ class MaxHeap:
         if len(self.heap) > 2:
             self.__swap(1, len(self.heap) - 1)
             max = self.heap.pop()
-            self.__bubbleDown(1)
+            self.__bubbleDown(1)  # bubbledown our new first item
         elif len(self.heap) == 2:  # since we filled heap[0] this means there is only 1 item
             max = self.heap.pop()
         else:
@@ -62,8 +62,8 @@ class MaxHeap:
         left = index * 2  # finds left child
         right = index * 2 + 1  # finds right child
         largest = index
-        if len(self.heap) > left and self.heap[largest] < self.heap[
-            left]:  # if the item we are bubbling down is less than its left child, swap positions with left child
+        if len(self.heap) > left and self.heap[largest] < self.heap[left]:
+            # if the item we are bubbling down is less than its left child, swap positions with left child
             largest = left
         if len(self.heap) > right and self.heap[largest] < self.heap[right]:  # ""
             largest = right
@@ -79,5 +79,6 @@ if __name__ == '__main__':
     m = MaxHeap([95, 3, 21])
     m.push(10)
     m.push(100)
+    m.push(101)
 
     print(m)
