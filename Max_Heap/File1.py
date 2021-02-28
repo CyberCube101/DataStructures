@@ -52,7 +52,7 @@ class MaxHeap:
 
     def __floatUp(self, index):  # index is the item we want to float up
         parent = index // 2  # get index of its parent
-        if index <= 1: # already in top position
+        if index <= 1:  # already in top position
             return
         elif self.heap[index] > self.heap[parent]:
             self.__swap(index, parent)
