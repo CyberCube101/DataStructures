@@ -28,7 +28,7 @@ print(sum(z[-2:]))  # sum last 2 items
 
 words = ['Kevin', 'Kalvin', 'Korty', 'Kupton']
 
-new_list = sorted(words, key=lambda k: k[2])
+new_list = sorted(words, key=lambda k: k[2]) # sort by third letter
 
 print(new_list)
 
