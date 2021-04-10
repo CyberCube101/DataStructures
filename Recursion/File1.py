@@ -12,17 +12,16 @@ l = [1, 2, 5, 4]
 print(isSorted(l))
 
 
-@lru_cache(maxsize=None)
-def fib(n):
-    if isinstance(n, int):
+class Solution:
+    def fib(self, n):
         if n == 0:
             return 0
         elif n == 1:
+
             return 1
         else:
-            return fib(n - 1) + fib(n - 2)
-    else:
-        raise TypeError("n must be positive integer")
+            return self.fib(n - 1) + self.fib(n - 2)
 
 
-print(fib(10))
+s = Solution()
+print(s.fib(7))
